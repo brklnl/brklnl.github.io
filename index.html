@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hüseyin Burak Ünal — Autonomous Systems &amp; Robotics</title>
+<meta name="description" content="Portfolio of Hüseyin Burak Ünal — UAV perception, autonomous systems, and the RAMSES AMADEE-24 Mars analogue mission.">
+<meta name="author" content="Hüseyin Burak Ünal">
+<meta name="theme-color" content="#071b30">
+<link rel="canonical" href="https://brklnl.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23071b30'/%3E%3Ctext x='16' y='23' font-family='Arial,Helvetica,sans-serif' font-size='21' font-weight='bold' fill='%23e0722c' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hüseyin Burak Ünal">
+<meta property="og:url" content="https://brklnl.github.io/">
+<meta property="og:title" content="Hüseyin Burak Ünal — Autonomous Systems &amp; Robotics">
+<meta property="og:description" content="UAV perception, autonomous systems, and the RAMSES AMADEE-24 Mars analogue mission.">
+<meta property="og:image" content="https://brklnl.github.io/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hüseyin Burak Ünal with the RAMSES UAV at the AMADEE-24 mission demo">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hüseyin Burak Ünal — Autonomous Systems &amp; Robotics">
+<meta name="twitter:description" content="UAV perception, autonomous systems, and the RAMSES AMADEE-24 Mars analogue mission.">
+<meta name="twitter:image" content="https://brklnl.github.io/assets/og-image.jpg">
+<style>
+  :root{
+    --bg:#071b30;
+    --bg-alt:#0a2338;
+    --card:#0d2942;
+    --border:#21445f;
+    --text:#e9eef4;
+    --text-dim:#9fb4c8;
+    --accent:#e0722c;
+    --accent-soft:#e0722c22;
+    --link:#7bb0e7;
+    --radius:10px;
+    --maxw:960px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+  }
+  img{max-width:100%;display:block;}
+  a{color:var(--link);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  header.site{
+    position:sticky;top:0;z-index:10;
+    background:rgba(7,27,48,0.9);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);
+  }
+  nav.site{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:var(--maxw);margin:0 auto;}
+  nav.site .name{font-weight:700;letter-spacing:0.02em;color:var(--text);}
+  nav.site ul{list-style:none;display:flex;gap:22px;margin:0;padding:0;}
+  nav.site a{color:var(--text-dim);font-size:0.92rem;}
+  nav.site a:hover{color:var(--text);text-decoration:none;}
+
+  .hero{padding:64px 0 40px;}
+  .hero-inner{display:flex;gap:36px;align-items:center;flex-wrap:wrap;}
+  .hero-photo{
+    width:260px;height:auto;border-radius:var(--radius);
+    object-fit:cover;border:1px solid var(--border);
+    flex-shrink:0;
+  }
+  .hero-text h1{font-size:1.9rem;margin:0 0 6px;}
+  .hero-text .role{color:var(--accent);font-weight:600;font-size:1rem;margin-bottom:14px;}
+  .hero-text p{color:var(--text-dim);max-width:56ch;margin:0 0 16px;}
+  .links-row{display:flex;gap:14px;flex-wrap:wrap;font-size:0.92rem;}
+  .links-row a{
+    border:1px solid var(--border);padding:6px 12px;border-radius:999px;
+    color:var(--text);
+  }
+  .links-row a:hover{border-color:var(--accent);text-decoration:none;color:var(--accent);}
+
+  section{padding:48px 0;border-top:1px solid var(--border);scroll-margin-top:72px;}
+  footer{scroll-margin-top:72px;}
+  section h2{font-size:1.4rem;margin:0 0 6px;}
+  section .eyebrow{color:var(--accent);text-transform:uppercase;font-size:0.78rem;letter-spacing:0.08em;font-weight:600;margin-bottom:6px;}
+  section .lead{color:var(--text-dim);max-width:70ch;margin-bottom:28px;}
+
+  .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px;}
+  .badge{
+    display:inline-flex;align-items:center;gap:6px;
+    background:var(--accent-soft);color:var(--accent);
+    border:1px solid #e0722c55;
+    padding:7px 14px;border-radius:999px;font-size:0.88rem;font-weight:600;
+  }
+
+  .gallery{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:28px;
+  }
+  .gallery figure{margin:0;border-radius:var(--radius);overflow:hidden;background:var(--card);border:1px solid var(--border);}
+  .gallery img{aspect-ratio:3/2;object-fit:cover;width:100%;}
+  .gallery figcaption{font-size:0.82rem;color:var(--text-dim);padding:10px 12px;}
+
+  .wide-figs{display:flex;flex-direction:column;gap:16px;margin-bottom:28px;}
+  .wide-figs figure{margin:0;border-radius:var(--radius);overflow:hidden;background:var(--card);border:1px solid var(--border);}
+  .wide-figs img{width:100%;display:block;}
+  .wide-figs figcaption{font-size:0.82rem;color:var(--text-dim);padding:10px 12px;}
+
+  .figure-solo{margin:0 0 24px;border-radius:var(--radius);overflow:hidden;background:var(--card);border:1px solid var(--border);max-width:640px;}
+  .figure-solo img{width:100%;display:block;}
+  .figure-solo figcaption{font-size:0.82rem;color:var(--text-dim);padding:10px 12px;}
+
+  .clip-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0;}
+  .clip-row figure{margin:0;border-radius:var(--radius);overflow:hidden;background:var(--card);border:1px solid var(--border);}
+  .clip-row video{width:100%;display:block;background:#000;}
+  .clip-row figcaption{font-size:0.82rem;color:var(--text-dim);padding:10px 12px;}
+  @media (max-width:700px){.clip-row{grid-template-columns:1fr;}}
+
+  .video-wrap{
+    position:relative;padding-bottom:56.25%;height:0;overflow:hidden;
+    border-radius:var(--radius);border:1px solid var(--border);margin-bottom:24px;
+    background:#000;
+  }
+  .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:10px 18px;border-radius:8px;font-size:0.92rem;font-weight:600;
+  }
+  .btn-primary{background:var(--accent);color:#08243f;}
+  .btn-primary:hover{background:#f28744;text-decoration:none;}
+  .btn-ghost{border:1px solid var(--border);color:var(--text);}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);text-decoration:none;}
+
+  .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
+  .project-card{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:20px;
+  }
+  .project-card h3{margin:0 0 8px;font-size:1.05rem;}
+  .project-card p{color:var(--text-dim);font-size:0.92rem;margin:0 0 14px;}
+  .project-card a{font-size:0.88rem;font-weight:600;}
+  .project-card .card-links{display:flex;gap:16px;flex-wrap:wrap;}
+
+  .exp-list{display:flex;flex-direction:column;gap:26px;}
+  .exp-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px 16px;}
+  .exp-head h3{margin:0;font-size:1.08rem;}
+  .exp-meta{color:var(--text-dim);font-size:0.85rem;}
+  .exp-role{color:var(--accent);font-size:0.9rem;font-weight:600;margin:5px 0 8px;}
+  .exp-item .exp-desc{color:var(--text-dim);font-size:0.92rem;margin:0;max-width:72ch;}
+  .exp-title{display:flex;align-items:center;gap:14px;}
+  .exp-logo{display:inline-flex;align-items:center;background:#fff;border-radius:6px;padding:6px 12px;flex-shrink:0;}
+  .exp-logo img{height:24px;width:auto;display:block;}
+
+  .brand-logo{max-width:280px;width:100%;height:auto;background:#fff;border-radius:var(--radius);padding:16px 20px;margin-bottom:22px;}
+
+  footer{padding:40px 0 60px;border-top:1px solid var(--border);}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  footer .links-row a{border:none;padding:0;}
+  footer small{color:var(--text-dim);}
+
+  @media (max-width:700px){
+    .gallery{grid-template-columns:1fr;}
+    .hero-inner{flex-direction:column;text-align:center;}
+    .hero-text p{max-width:none;}
+    .links-row{justify-content:center;}
+    nav.site{flex-wrap:wrap;gap:8px 0;}
+    nav.site ul{flex-wrap:wrap;gap:14px;}
+    .exp-head{gap:2px 10px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav class="site">
+    <span class="name">H. Burak Ünal</span>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#nextex">NexTex-AI</a></li>
+      <li><a href="#ramses">RAMSES</a></li>
+      <li><a href="#mars-sim">Simulation</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="wrap">
+  <section class="hero" style="border-top:none;">
+    <div class="hero-inner">
+      <img class="hero-photo" src="assets/images/profile.jpg" alt="Hüseyin Burak Ünal">
+      <div class="hero-text">
+        <h1>Hüseyin Burak Ünal</h1>
+        <div class="role">Autonomous Systems &amp; Robotics — UAV Perception, Deep Learning</div>
+        <p>BSc in Electrical and Electronics Engineering. MSc in Information and Communications Engineering (Autonomous Systems &amp; Robotics), University of Klagenfurt. I build perception and estimation systems for UAVs — from deep learning-based landing site detection to visual odometry and sensor fusion — and have field-tested them on the AMADEE-24 Mars analogue mission.</p>
+        <div class="links-row">
+          <a href="mailto:h1uenal@edu.aau.at">✉ Email</a>
+          <a href="https://github.com/brklnl" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/burak-ünal-011194103" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="assets/Burak_Unal_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+          <a href="https://netlibrary.aau.at/urn/urn:nbn:at:at-ubk:1-63611" target="_blank" rel="noopener">MSc Thesis</a>
+          <a href="https://www.nextex-ai.com/" target="_blank" rel="noopener">NexTex-AI</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="eyebrow">Experience</div>
+    <h2>Where I've Worked</h2>
+
+    <div class="exp-list">
+      <div class="exp-item">
+        <div class="exp-head">
+          <div class="exp-title">
+            <div class="exp-logo"><img src="assets/logos/infineon.svg" alt="Infineon Technologies logo"></div>
+            <h3>Infineon Technologies</h3>
+          </div>
+          <span class="exp-meta">Feb 2025 – Jan 2026 · Villach, Austria</span>
+        </div>
+        <p class="exp-role">Automated Verification Flow Development — full-time internship</p>
+        <p class="exp-desc">Refactored the mixed-signal verification flow into a more robust, generalized toolchain, adding automated report generation and direct regression execution. Delivered the team's first LLM-integrated data-parsing pipeline for industrial verification, with validation protocols that guarantee data integrity before downstream processing.</p>
+      </div>
+      <div class="exp-item">
+        <div class="exp-head">
+          <div class="exp-title">
+            <div class="exp-logo"><img src="assets/logos/aau.svg" alt="University of Klagenfurt (AAU) logo"></div>
+            <h3>University of Klagenfurt — Control of Networked Systems (CNS)</h3>
+          </div>
+          <span class="exp-meta">2023 · Klagenfurt, Austria</span>
+        </div>
+        <p class="exp-role">Research Student</p>
+        <p class="exp-desc">Team leader of RAMSES in the Austrian Space Forum's AMADEE-24 analogue Mars mission. Developed AI-based autonomous landing-site detection for unknown environments and built the simulation scenarios used to generate training data for aerial computer-vision tasks.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="nextex">
+    <div class="eyebrow">Current Venture</div>
+    <h2>NexTex-AI</h2>
+    <img class="brand-logo" src="assets/images/nextex-logo.png" alt="NexTex-AI logo">
+    <p class="lead">Co-founding an early-stage venture building an AI-powered quality-inspection platform for textile manufacturing, currently piloting with partners in Europe. Leading the technical architecture and product development.</p>
+    <div class="cta-row">
+      <a class="btn btn-ghost" href="https://www.nextex-ai.com/" target="_blank" rel="noopener">Visit NexTex-AI ↗</a>
+    </div>
+  </section>
+
+  <section id="ramses">
+    <div class="eyebrow">Featured Mission</div>
+    <h2>RAMSES — AMADEE-24 Analogue Mars Mission</h2>
+    <p class="lead" style="margin-bottom:10px;">Team leader of RAMSES (Rover Aerial Mars Support and Exploration System) within the Austrian Space Forum's AMADEE-24 Analogue Mars Mission. RAMSES uses a joint deep learning network (semantic segmentation + optical flow) to autonomously detect safe landing sites for Mars-like UAV operations, validated on real mission data in the field.</p>
+    <p class="lead">The MSc thesis is published on the <a href="https://oewf.org/en/academic-thesises-at-the-austrian-space-forum/" target="_blank" rel="noopener">Austrian Space Forum's (ÖWF) academic theses page</a>.</p>
+
+    <div class="gallery">
+      <figure>
+        <img src="assets/images/drone-showroom.jpg" alt="Drone showroom presentation, dress rehearsal 1">
+        <figcaption>Drone showroom — DR1</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/poster-presentation.jpg" alt="Poster presentation, dress rehearsal 2">
+        <figcaption>Poster presentation — DR2</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/workshop-presentation.jpeg" alt="Presenting results at the AMADEE-24 Science Workshop in Salzburg">
+        <figcaption>AMADEE-24 Science Workshop, Salzburg</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/ramses-uav.jpg" alt="RAMSES UAV hardware">
+        <figcaption>RAMSES UAV</figcaption>
+      </figure>
+    </div>
+
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/jY0kbtr21o0" title="AMADEE-24 Experiment Spotlight: RAMSES Autonomous Helicopter System" allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://netlibrary.aau.at/urn/urn:nbn:at:at-ubk:1-63611" target="_blank" rel="noopener">Read the Thesis</a>
+      <a class="btn btn-ghost" href="https://github.com/brklnl/UAV-Landing-Site-Detection-ROS2" target="_blank" rel="noopener">Code Repository</a>
+    </div>
+  </section>
+
+  <section id="mars-sim">
+    <div class="eyebrow">Simulation &amp; Data</div>
+    <h2>Synthetic Data Generation in NVIDIA Isaac Sim</h2>
+    <p class="lead">Real Mars-analogue imagery for training the RAMSES landing-site network is scarce, so I built a data generation pipeline in NVIDIA Isaac Sim: procedurally varied Mars-like terrains, a UAV camera flown along scripted nadir trajectories, and synchronized per-frame ground truth — RGB, semantic segmentation, depth, and optical flow.</p>
+
+    <div class="wide-figs">
+      <figure>
+        <img src="assets/images/mars-sim-environments.jpg" alt="Grid of eight procedurally varied Mars-analogue terrain renders from a nadir view" loading="lazy">
+        <figcaption>Procedurally varied Mars-analogue terrains, rendered from a nadir UAV view</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/mars-sim-data-generation.jpg" alt="Isaac Sim data generation: nadir RGB with synchronized semantic segmentation and optical flow" loading="lazy">
+        <figcaption>Trajectory-driven capture in Isaac Sim: nadir RGB alongside synchronized semantic segmentation and optical-flow ground truth</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="eyebrow">Selected Work</div>
+    <h2>Other Projects</h2>
+    <p class="lead">A few of the individual projects I've worked on beyond the thesis, spanning navigation, sensor fusion, and applied computer vision.</p>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>AI/CV Product Development — NexTex-AI</h3>
+        <p>Building a multimodal AI/computer vision proof-of-concept for textile anomaly detection as part of an early-stage venture, currently pursuing funding. Leading technical architecture and development.</p>
+      </div>
+      <div class="project-card">
+        <h3>Multi-Sensor Fusion for GNSS-Denied UAV Navigation</h3>
+        <p>Custom MultiModal EKF fusing IMU, barometer, magnetometer, visual odometry, and LiDAR ICP for GPS-denied autonomous flight. Built on PX4 SITL + Gazebo Harmonic + ROS2.</p>
+        <a href="https://github.com/brklnl/MultiModal-UAV-NAV" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="project-card">
+        <h3>Air–Ground Robot Collaboration for Orchard Inspection</h3>
+        <p>Autonomous drone + mobile ground robot pipeline for agricultural orchards: a PX4 drone surveys the field and builds RTAB-Map 2D/3D maps, row detection extracts the tree lines, and a Husky robot patrols them via Nav2. Built on ROS2 Humble + Gazebo Harmonic.</p>
+        <a href="https://github.com/brklnl/AgriDroneMRNav-" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="project-card">
+        <h3>VLM-Based Semantic Navigation</h3>
+        <p>A SemanticCostmapLayer plugin for Nav2 that converts vision-language model scene descriptions into local semantic hazard maps for robot planning.</p>
+        <a href="https://github.com/brklnl/vlm_robotics" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="project-card">
+        <h3>Leaf Disease Detection</h3>
+        <p>An automated diagnostic pipeline fusing DeepLabV3, Mask R-CNN, and YOLO, with SAM-based interactive segmentation, deployed via Flask and Docker.</p>
+        <a href="https://github.com/brklnl/leaf-disease-segmentation-app" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="project-card">
+        <h3>UAV Landing Site Detection (Thesis Code)</h3>
+        <p>ROS2 implementation of the LSAM pipeline: nadir camera frames → semantic segmentation + optical flow → real-time accumulated safety costmap.</p>
+        <a href="https://github.com/brklnl/UAV-Landing-Site-Detection-ROS2" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="alumni-feature">
+    <div class="eyebrow">In the Media</div>
+    <h2>Alumni Feature — Izmir University of Economics</h2>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/bJesvBLgrM0" title="İzmir Ekonomililerle 5 Dakika: Mezun - Hüseyin Burak Ünal" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <p class="lead" style="margin-bottom:0;">Featured in <a href="https://youtube.com/watch?v=bJesvBLgrM0" target="_blank" rel="noopener">"İzmir Ekonomililerle 5 Dakika"</a>, Izmir University of Economics' 5-minute alumni interview series.</p>
+  </section>
+
+  <section id="bsc-project">
+    <div class="eyebrow">Where It Started</div>
+    <h2>Agricultural Autonomous Robot — BSc Graduation Project</h2>
+    <p class="lead">Izmir University of Economics, 2019–2020 — a multi-sensor TurtleBot3 Burger built to navigate orchard environments autonomously, in collaboration with an industrial partner.</p>
+
+    <figure class="figure-solo">
+      <img src="assets/images/bsc-robot-testenv.jpg" alt="Tracked mobile robot on the floor next to a glass door in the test environment" loading="lazy">
+      <figcaption>The robot in its glass-walled test space — reflective surfaces were used to stress the SLAM mapping</figcaption>
+    </figure>
+
+    <p class="lead">Monocular-camera object distance estimation (Python/LabVIEW), a Kalman filter fusing HC-SR04 ultrasonic readings for state estimation, and ROS SLAM-based autonomous navigation. On-device TFLite object detection on a Raspberry Pi was prototyped to bring AI perception to the robot, though the integration was not completed.</p>
+
+    <div class="clip-row">
+      <figure>
+        <video src="assets/video/bsc-distance-measurement.mp4" controls muted loop playsinline preload="metadata"></video>
+        <figcaption>Monocular distance estimation: colour segmentation → object mask → range readout (2020 demo)</figcaption>
+      </figure>
+      <figure>
+        <video src="assets/video/bsc-tflite-detection.mp4" controls muted loop playsinline preload="metadata"></video>
+        <figcaption>TFLite object detection running on a Raspberry Pi (2020 demo)</figcaption>
+      </figure>
+    </div>
+  </section>
+</div>
+
+<footer id="contact">
+  <div class="wrap">
+    <small>© 2026 Hüseyin Burak Ünal</small>
+    <div class="links-row">
+      <a href="mailto:h1uenal@edu.aau.at">Email</a>
+      <a href="https://github.com/brklnl" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/burak-ünal-011194103" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
